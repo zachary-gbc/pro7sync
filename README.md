@@ -7,7 +7,7 @@
 1. Click plus sign at the bottom and add in /bin/bash
 1. Open terminal (use command+space and type terminal) and type: chmod +x ~/Documents/Scripts
 1. To ensure git is installed, type: git --help (if it is not installed it should ask you to install)
-1. In terminal type: git clone --depth=1 https://github.com/zachary-gbc/pro7sync ~/Documents/Scripts
+1. In terminal type: git clone --depth=1 https://github.com/zachary-gbc/pro7sync ~/Documents/Scripts/pro7sync
 1. In terminal type: bash ~/Documents/Scripts/pro7sync/install.sh
 1. Quit terminal
 1. Copy ~/Documents/Scripts/pro7scripts.plist to ~/Library/LaunchAgents
