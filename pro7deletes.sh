@@ -31,8 +31,8 @@ do
 
         if [[ "$line" == *"*"* ]]
         then
-          rm -f $local_item
-          rm -f $sync_item
+          rm -rf $local_item
+          rm -rf $sync_item
           echo "Removed: $line"
         fi
       fi
