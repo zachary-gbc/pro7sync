@@ -6,5 +6,6 @@ mv -f ~/Documents/Scripts/pro7sync/* ~/Documents/Scripts
 rm -f ~/Documents/Scripts/readme.md
 rm -rf ~/Documents/Scripts/pro7sync
 chmod +x ~/Documents/Scripts/*.sh
+chmod +x ~/Documents/Scripts/*.command
 
 echo "Scripts Installed"
