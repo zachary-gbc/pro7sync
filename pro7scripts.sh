@@ -4,7 +4,7 @@ logdatetime=$(date +%F_%H:%M:%S)
 host=$(hostname -s)
 echo "$logdatetime - Pro7 Scripts Started"
 
-processnumber=$(ps aux | grep -v grep | grep -ci "ProPresenter")
+processnumber=$(ps aux | grep -v grep | grep -ci "ProPresenter.app")
 currentdate=$(date +%F)
 manual=$1 # options: manual, manualbackup, manualsync
 syncdirection="none" # options: up, down, both
@@ -71,3 +71,5 @@ then
   bash ~/Documents/Scripts/pro7sync.sh $manualsync $syncdirection
   bash ~/Documents/Scripts/pro7deletes.sh
 fi
+
+bash ~/Documents/Scripts/pro7logcleanup.sh

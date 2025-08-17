@@ -26,14 +26,14 @@ do
           mv -f "$local_item" "$mv_path"
           rm -rf "$local_item"
           rm -rf "$sync_item"
-          echo "Removed: $line"
+          echo "$logdatetime - Removed: $line"
         fi
 
         if [[ "$line" == *"*"* ]]
         then
           rm -rf $local_item
           rm -rf $sync_item
-          echo "Removed: $line"
+          echo "$logdatetime - Removed: $line"
         fi
       fi
     fi
