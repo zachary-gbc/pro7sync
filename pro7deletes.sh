@@ -40,4 +40,13 @@ do
   done <~/Sync/ProPresenter_Shared_Content/Deletes/$area.txt
 done
 
+cd ~/Documents/ProPresenter/Libraries
+find . -name "*-CONFLICT-*" -delete
+cd ~/Documents/ProPresenter/Themes
+find . -name "*-CONFLICT-*" -delete
+cd ~/Sync/ProPresenter_Shared_Content/Libraries
+find . -name "*-CONFLICT-*" -delete
+cd ~/Sync/ProPresenter_Shared_Content/Themes
+find . -name "*-CONFLICT-*" -delete
+
 echo "$logdatetime - Deletes Complete"
