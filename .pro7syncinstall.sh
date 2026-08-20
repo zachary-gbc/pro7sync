@@ -9,6 +9,8 @@ else
     machine=$(<~/Documents/Scripts/Pro7Sync/.machine)
 fi
 
+rm -rf ~/Documents/Scripts/Pro7Sync
+read $var
 mkdir -p ~/Documents/Scripts/Pro7Sync
 read $var
 rm -rf ~/Documents/Scripts/Pro7Sync/*
@@ -20,9 +22,9 @@ mv -f ~/Documents/Scripts/pro7sync-gh/.pro7logcleanup.sh ~/Documents/Scripts/Pro
 mv -f ~/Documents/Scripts/pro7sync-gh/.pro7scripts.sh ~/Documents/Scripts/Pro7Sync
 mv -f ~/Documents/Scripts/pro7sync-gh/.pro7sync.sh ~/Documents/Scripts/Pro7Sync
 mv -f ~/Documents/Scripts/pro7sync-gh/.pro7syncinstall.sh ~/Documents/Scripts/Pro7Sync
-mv -f ~/Documents/Scripts/pro7sync-gh/.install.command ~/Documents/Scripts/Pro7Sync
-mv -f ~/Documents/Scripts/pro7sync-gh/.manual.command ~/Documents/Scripts/Pro7Sync
-mv -f ~/Documents/Scripts/pro7sync-gh/.newdelete.command ~/Documents/Scripts/Pro7Sync
+mv -f ~/Documents/Scripts/pro7sync-gh/install.command ~/Documents/Scripts/Pro7Sync
+mv -f ~/Documents/Scripts/pro7sync-gh/manual.command ~/Documents/Scripts/Pro7Sync
+mv -f ~/Documents/Scripts/pro7sync-gh/newdelete.command ~/Documents/Scripts/Pro7Sync
 read $var
 chmod +x ~/Documents/Scripts/Pro7Sync/*.sh
 chmod +x ~/Documents/Scripts/Pro7Sync/*.command
