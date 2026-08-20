@@ -19,7 +19,7 @@ mv -f ~/Documents/Scripts/pro7sync-gh/.pro7logcleanup.sh ~/Documents/Scripts/Pro
 mv -f ~/Documents/Scripts/pro7sync-gh/.pro7scripts.sh ~/Documents/Scripts/Pro7Sync
 mv -f ~/Documents/Scripts/pro7sync-gh/.pro7sync.sh ~/Documents/Scripts/Pro7Sync
 mv -f ~/Documents/Scripts/pro7sync-gh/.pro7syncinstall.sh ~/Documents/Scripts/Pro7Sync
-mv -f ~/Documents/Scripts/pro7sync-gh/install.command ~/Documents/Scripts/Pro7Sync
+mv -f ~/Documents/Scripts/pro7sync-gh/update.command ~/Documents/Scripts/Pro7Sync
 mv -f ~/Documents/Scripts/pro7sync-gh/manual.command ~/Documents/Scripts/Pro7Sync
 mv -f ~/Documents/Scripts/pro7sync-gh/newdelete.command ~/Documents/Scripts/Pro7Sync
 chmod +x ~/Documents/Scripts/Pro7Sync/.pro7backup.sh
@@ -53,7 +53,7 @@ fi
 
 rm -f ~/Documents/Scripts/Pro7Sync/readme.md
 rm -f ~/Documents/Scripts/Pro7Sync/pro7sync.plist
-rm -f ~/Documents/Scripts/Pro7Sync/install.png
+rm -f ~/Documents/Scripts/Pro7Sync/update.png
 rm -f ~/Documents/Scripts/Pro7Sync/manual.png
 rm -f ~/Documents/Scripts/Pro7Sync/delete.png
 rm -rf ~/Documents/Scripts/pro7sync-gh
