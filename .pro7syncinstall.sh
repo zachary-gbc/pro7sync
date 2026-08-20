@@ -2,11 +2,11 @@
 
 new="0"
 
-if [[ -f ~/Documents/Scripts/Pro7Sync/.machine ]]
+if [[ -f ~/Documents/Scripts/Pro7Sync/.machine.txt ]]
 then
     new="1"
 else
-    machine=$(<~/Documents/Scripts/Pro7Sync/.machine)
+    machine=$(<~/Documents/Scripts/Pro7Sync/.machine.txt)
 fi
 
 rm -rf ~/Documents/Scripts/Pro7Sync
@@ -36,7 +36,7 @@ then
     read machine
 fi
 
-echo $machine > ~/Documents/Scripts/Pro7Sync/.machine
+echo $machine > ~/Documents/Scripts/Pro7Sync/.machine.txt
 
 echo "Should Automation Be Turned On? (Y on N)"
 read plist

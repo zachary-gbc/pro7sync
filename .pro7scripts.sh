@@ -1,7 +1,7 @@
 #!/bin/bash
 
 logdatetime=$(date +%F_%H:%M:%S)
-machine=$(<~/Documents/Scripts/Pro7Sync/.machine)
+machine=$(<~/Documents/Scripts/Pro7Sync/.machine.txt)
 echo "$logdatetime - Pro7 Scripts Started"
 
 processnumber=$(ps aux | grep -v grep | grep -ci "ProPresenter.app")
