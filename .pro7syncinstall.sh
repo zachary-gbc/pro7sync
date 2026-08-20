@@ -45,9 +45,8 @@ if [[ $plist == "Y" ]] || [[ $plist == "y" ]]
 then
     sed -i '' "s/username/$USER/g" ~/Documents/Scripts/pro7sync-gh/pro7sync.plist
     sed -i '' "s/machinename/$machine/g" ~/Documents/Scripts/pro7sync-gh/pro7sync.plist
-    read $var
     mkdir ~/Library/LaunchAgents
-    #mv ~/Documents/Scripts/pro7sync-gh/pro7sync.plist ~/Library/LaunchAgents/pro7sync.plist
+    mv ~/Documents/Scripts/pro7sync-gh/pro7sync.plist ~/Library/LaunchAgents/pro7sync.plist
 fi
 
 rm -f ~/Documents/Scripts/Pro7Sync/readme.md
