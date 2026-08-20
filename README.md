@@ -23,7 +23,7 @@
 1. Open terminal (use command+space and type terminal) and type: chmod +x ~/Documents/Scripts
 1. To ensure git is installed, type: git --help (if it is not installed it should ask you to install)
 1. In terminal type: git clone --depth=1 https://github.com/zachary-gbc/pro7sync ~/Documents/Scripts/pro7sync-gh
-1. In terminal type: bash ~/Documents/Scripts/pro7sync-gh/pro7syncinstall.sh
+1. In terminal type: bash ~/Documents/Scripts/pro7sync-gh/..pro7syncinstall.sh
 1. Follow prompts on screen
 1. Quit terminal
 1. Reboot Computer
