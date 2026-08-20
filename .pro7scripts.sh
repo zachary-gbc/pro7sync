@@ -75,7 +75,7 @@ then
   runsync="yes"
 fi
 
-while x <= 10
+while (( x <= 10 ))
 do
     ((x++))
     recentchanges=$(find "$HOME/Sync" -type f -newermt "-${idletime} seconds" 2>/dev/null)
