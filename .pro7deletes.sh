@@ -1,7 +1,6 @@
 #!/bin/bash
 
 logdatetime=$(date +%F_%H:%M:%S)
-
 echo "$logdatetime - Running Deletes Now";
 
 declare -a areas=("Libraries" "Themes" "Fonts")

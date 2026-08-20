@@ -4,9 +4,9 @@
 # 2 = direction (up, down, both)
 
 logdatetime=$(date +%F_%H:%M:%S)
-direction=$2
-
 echo "$logdatetime - Running Sync Now";
+
+direction=$2
 
 if [[ $direction == "both" ]] || [[ $direction == "up" ]]
 then

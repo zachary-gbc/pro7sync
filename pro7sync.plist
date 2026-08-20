@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>pro7.backup</string>
+	<key>Program</key>
+	<string>/Users/username/Documents/Scripts/Pro7Sync/pro7scripts.sh</string>
+	<key>StartCalendarInterval</key>
+		<array>
+			<dict>
+				<key>Minute</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Minute</key>
+				<integer>10</integer>
+			</dict>
+			<dict>
+				<key>Minute</key>
+				<integer>20</integer>
+			</dict>
+			<dict>
+				<key>Minute</key>
+				<integer>30</integer>
+			</dict>
+			<dict>
+				<key>Minute</key>
+				<integer>40</integer>
+			</dict>
+			<dict>
+				<key>Minute</key>
+				<integer>50</integer>
+			</dict>
+		</array>
+	<key>StandardOutPath</key>
+	<string>/Users/username/Sync/ProPresenter_Shared_Content/Logs/machinename_log.txt</string>
+	<key>StandardErrorPath</key>
+	<string>/Users/username/Sync/ProPresenter_Shared_Content/Logs/machinename_errlog.txt</string>
+</dict>
+</plist>

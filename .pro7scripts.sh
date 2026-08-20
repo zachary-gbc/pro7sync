@@ -1,7 +1,7 @@
 #!/bin/bash
 
 logdatetime=$(date +%F_%H:%M:%S)
-host=$(hostname -s)
+machine=$(<~/Documents/Scripts/Pro7Sync/machine)
 echo "$logdatetime - Pro7 Scripts Started"
 
 processnumber=$(ps aux | grep -v grep | grep -ci "ProPresenter.app")
@@ -18,10 +18,20 @@ lastbackupday="never"
 prorunning="yes"
 machinebackup="no"
 machineset="no"
+idletime=120
+ready="no"
+
+if [[ $manual == "manual" ]] || [[ $manual == "manualsync" ]] || [[ $manual == "manualbackup" ]]
+then
+    ready="yes"
+    x=20
+else
+    x=0
+fi
 
 while read line; do
   IFS=' || ' read -ra items <<< "$line"
-  if [[ ${items[0]} == $host ]]
+  if [[ ${items[0]} == $machine ]]
   then
     backupfolder=${items[2]}
     machinebackup=${items[4]}
@@ -32,10 +42,14 @@ done <~/Sync/ProPresenter_Shared_Content/machines.txt
 
 if [[ $machineset == "no" ]]
 then
-  echo "Machine ($host) Not Setup in File"
+  echo "Machine ($machine) Not Setup in File"
   exit 1
 fi
-if [[ $processnumber == 0 ]]; then prorunning="no"; fi
+
+if [[ $processnumber == 0 ]]
+then
+    prorunning="no"
+fi
 
 if [[ $machinebackup == "yes" ]]
 then
@@ -61,15 +75,33 @@ then
   runsync="yes"
 fi
 
+while x <= 10
+do
+    ((x++))
+    recentchanges=$(find "$HOME/Sync" -type f -newermt "-${idletime} seconds" 2>/dev/null)
+    if [[ ! -n "$recentchanges" ]]
+    then
+        ready="yes"
+        break
+    fi
+    sleep 30
+done
+
+if [[ $ready == "no" ]]
+then
+    echo "$logdatetime - Sync App Still Syncing, Skipping Script";
+    exit 1
+fi
+
 if [[ $runbackup == "yes" ]]
 then
-  bash ~/Documents/Scripts/pro7backup.sh $manualbackup $backupfolder
+  bash ~/Documents/Scripts/Pro7Sync/.pro7backup.sh $manualbackup $backupfolder
 fi
 
 if [[ $runsync == "yes" ]]
 then
-  bash ~/Documents/Scripts/pro7sync.sh $manualsync $syncdirection
-  bash ~/Documents/Scripts/pro7deletes.sh
+  bash ~/Documents/Scripts/Pro7Sync/.pro7sync.sh $manualsync $syncdirection
+  bash ~/Documents/Scripts/Pro7Sync/.pro7deletes.sh
 fi
 
-bash ~/Documents/Scripts/pro7logcleanup.sh
+bash ~/Documents/Scripts/Pro7Sync/.pro7logcleanup.sh
