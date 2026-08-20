@@ -49,6 +49,7 @@ then
     mv ~/Documents/Scripts/pro7sync-gh/pro7sync.plist ~/Library/LaunchAgents/pro7sync.plist
     touch /Users/$USER/Sync/ProPresenter_Shared_Content/Logs/${machine}_log.txt
     touch /Users/$USER/Sync/ProPresenter_Shared_Content/Logs/${machine}_errlog.txt
+    echo "Please Reboot After Script Completes"
 fi
 
 rm -f ~/Documents/Scripts/Pro7Sync/readme.md
