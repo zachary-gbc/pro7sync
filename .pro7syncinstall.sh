@@ -10,12 +10,9 @@ else
 fi
 
 rm -rf ~/Documents/Scripts/Pro7Sync
-read $var
+rm -rf ~/Documents/Scripts/pro7sync-gh
 mkdir -p ~/Documents/Scripts/Pro7Sync
-read $var
-rm -rf ~/Documents/Scripts/Pro7Sync/*
 git clone --depth=1 https://github.com/zachary-gbc/pro7sync ~/Documents/Scripts/pro7sync-gh
-read $var
 mv -f ~/Documents/Scripts/pro7sync-gh/.pro7backup.sh ~/Documents/Scripts/Pro7Sync
 mv -f ~/Documents/Scripts/pro7sync-gh/.pro7deletes.sh ~/Documents/Scripts/Pro7Sync
 mv -f ~/Documents/Scripts/pro7sync-gh/.pro7logcleanup.sh ~/Documents/Scripts/Pro7Sync
@@ -26,7 +23,12 @@ mv -f ~/Documents/Scripts/pro7sync-gh/install.command ~/Documents/Scripts/Pro7Sy
 mv -f ~/Documents/Scripts/pro7sync-gh/manual.command ~/Documents/Scripts/Pro7Sync
 mv -f ~/Documents/Scripts/pro7sync-gh/newdelete.command ~/Documents/Scripts/Pro7Sync
 read $var
-chmod +x ~/Documents/Scripts/Pro7Sync/*.sh
+chmod +x ~/Documents/Scripts/Pro7Sync/.pro7backup.sh
+chmod +x ~/Documents/Scripts/Pro7Sync/.pro7deletes.sh
+chmod +x ~/Documents/Scripts/Pro7Sync/.pro7logcleanup.sh
+chmod +x ~/Documents/Scripts/Pro7Sync/.pro7scripts.sh
+chmod +x ~/Documents/Scripts/Pro7Sync/.pro7sync.sh
+chmod +x ~/Documents/Scripts/Pro7Sync/.pro7syncinstall.sh
 chmod +x ~/Documents/Scripts/Pro7Sync/*.command
 read $var
 
