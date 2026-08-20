@@ -22,7 +22,6 @@ mv -f ~/Documents/Scripts/pro7sync-gh/.pro7syncinstall.sh ~/Documents/Scripts/Pr
 mv -f ~/Documents/Scripts/pro7sync-gh/install.command ~/Documents/Scripts/Pro7Sync
 mv -f ~/Documents/Scripts/pro7sync-gh/manual.command ~/Documents/Scripts/Pro7Sync
 mv -f ~/Documents/Scripts/pro7sync-gh/newdelete.command ~/Documents/Scripts/Pro7Sync
-read $var
 chmod +x ~/Documents/Scripts/Pro7Sync/.pro7backup.sh
 chmod +x ~/Documents/Scripts/Pro7Sync/.pro7deletes.sh
 chmod +x ~/Documents/Scripts/Pro7Sync/.pro7logcleanup.sh
@@ -30,7 +29,6 @@ chmod +x ~/Documents/Scripts/Pro7Sync/.pro7scripts.sh
 chmod +x ~/Documents/Scripts/Pro7Sync/.pro7sync.sh
 chmod +x ~/Documents/Scripts/Pro7Sync/.pro7syncinstall.sh
 chmod +x ~/Documents/Scripts/Pro7Sync/*.command
-read $var
 
 if [[ "$new" -eq "1" ]]
 then
@@ -47,6 +45,7 @@ if [[ $plist == "Y" ]] || [[ $plist == "y" ]]
 then
     sed -i 's/username/$USER/g' ~/Documents/Scripts/pro7sync-gh/pro7sync.plist
     sed -i 's/machinename/$machine/g' ~/Documents/Scripts/pro7sync-gh/pro7sync.plist
+    mkdir ~/Library/LaunchAgents
     mv ~/Documents/Scripts/pro7sync-gh/pro7sync.plist ~/Library/LaunchAgents/pro7sync.plist
 fi
 
