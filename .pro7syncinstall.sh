@@ -2,7 +2,7 @@
 
 new="0"
 
-if [[ -f ~/Documents/Scripts/Pro7Sync/.machine.txt ]]
+if [[ ! -f ~/Documents/Scripts/Pro7Sync/.machine.txt ]]
 then
     new="1"
 else
