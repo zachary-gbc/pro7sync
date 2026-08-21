@@ -56,11 +56,10 @@ then
     touch /Users/$USER/Sync/ProPresenter_Shared_Content/Logs/${machine}_errlog.txt
     echo "Please Reboot After Script Completes"
 elif [[ $plist == "N" ]] || [[ $plist == "n" ]]
+then
     if [[ -f "~/Library/LaunchAgents/pro7sync.plist" ]]
     then
-        rm -f /Users/$USER/Library/LaunchAgents/pro7sync.plist
-        rm -f /Users/$USER/Sync/ProPresenter_Shared_Content/Logs/${machine}_log.txt
-        rm -f /Users/$USER/Sync/ProPresenter_Shared_Content/Logs/${machine}_errlog.txt
+        rm -f ~/Library/LaunchAgents/pro7sync.plist
     fi
 fi
 
