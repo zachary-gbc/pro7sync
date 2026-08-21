@@ -32,8 +32,13 @@ chmod +x ~/Documents/Scripts/Pro7Sync/*.command
 
 if [[ "$new" -eq "1" ]]
 then
-    echo "Please Input Machine Name from File"
-    read machine
+    read -p "Please Input Machine Name from File: " machine
+else
+    read -p "Current Machine Name is $machine. Press Enter to Keep Current Name or Input New Name: " machinenew
+    if [[ ! -z "$machinenew" ]]
+    then
+        machine=$machinenew
+    fi
 fi
 
 echo $machine > ~/Documents/Scripts/Pro7Sync/.machine.txt
@@ -50,6 +55,13 @@ then
     touch /Users/$USER/Sync/ProPresenter_Shared_Content/Logs/${machine}_log.txt
     touch /Users/$USER/Sync/ProPresenter_Shared_Content/Logs/${machine}_errlog.txt
     echo "Please Reboot After Script Completes"
+elif [[ $plist == "N" ]] || [[ $plist == "n" ]]
+    if [[ -f "~/Library/LaunchAgents/pro7sync.plist" ]]
+    then
+        rm -f /Users/$USER/Library/LaunchAgents/pro7sync.plist
+        rm -f /Users/$USER/Sync/ProPresenter_Shared_Content/Logs/${machine}_log.txt
+        rm -f /Users/$USER/Sync/ProPresenter_Shared_Content/Logs/${machine}_errlog.txt
+    fi
 fi
 
 rm -f ~/Documents/Scripts/Pro7Sync/readme.md

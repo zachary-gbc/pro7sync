@@ -32,3 +32,8 @@
 1. Open Finder and go to ~Documents/Scripts/Pro7Sync
 1. Double click on install.command
 1. Follow prompts if any
+
+## Updating Machine Name and/or Automation
+1. Run Update
+1. Change Machine Name if needed
+1. Choose different option for Automation if needed
