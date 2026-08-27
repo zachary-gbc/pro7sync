@@ -9,6 +9,8 @@ else
     machine=$(<~/Documents/Scripts/Pro7Sync/.machine.txt)
 fi
 
+clear
+
 rm -rf ~/Documents/Scripts/Pro7Sync
 rm -rf ~/Documents/Scripts/pro7sync-gh
 mkdir -p ~/Documents/Scripts/Pro7Sync
@@ -22,6 +24,9 @@ mv -f ~/Documents/Scripts/pro7sync-gh/.pro7syncinstall.sh ~/Documents/Scripts/Pr
 mv -f ~/Documents/Scripts/pro7sync-gh/update.command ~/Documents/Scripts/Pro7Sync
 mv -f ~/Documents/Scripts/pro7sync-gh/manual.command ~/Documents/Scripts/Pro7Sync
 mv -f ~/Documents/Scripts/pro7sync-gh/newdelete.command ~/Documents/Scripts/Pro7Sync
+mv -f ~/Documents/Scripts/pro7sync-gh/update.icns ~/Documents/Scripts/Pro7Sync
+mv -f ~/Documents/Scripts/pro7sync-gh/manual.icns ~/Documents/Scripts/Pro7Sync
+mv -f ~/Documents/Scripts/pro7sync-gh/delete.icns ~/Documents/Scripts/Pro7Sync
 chmod +x ~/Documents/Scripts/Pro7Sync/.pro7backup.sh
 chmod +x ~/Documents/Scripts/Pro7Sync/.pro7deletes.sh
 chmod +x ~/Documents/Scripts/Pro7Sync/.pro7logcleanup.sh
@@ -29,6 +34,9 @@ chmod +x ~/Documents/Scripts/Pro7Sync/.pro7scripts.sh
 chmod +x ~/Documents/Scripts/Pro7Sync/.pro7sync.sh
 chmod +x ~/Documents/Scripts/Pro7Sync/.pro7syncinstall.sh
 chmod +x ~/Documents/Scripts/Pro7Sync/*.command
+
+clear
+echo " "
 
 if [[ "$new" -eq "1" ]]
 then
@@ -73,9 +81,10 @@ rm -f ~/Documents/Scripts/Pro7Sync/pro7sync.plist
 rm -f ~/Documents/Scripts/Pro7Sync/update.icns
 rm -f ~/Documents/Scripts/Pro7Sync/manual.icns
 rm -f ~/Documents/Scripts/Pro7Sync/delete.icns
-rm -f ~/Documents/Scripts/Pro7Sync/update.png
-rm -f ~/Documents/Scripts/Pro7Sync/manual.png
-rm -f ~/Documents/Scripts/Pro7Sync/delete.png
 rm -rf ~/Documents/Scripts/pro7sync-gh
 
+clear
+echo " "
 echo "Scripts Installed"
+echo "It Is Safe To Close This Window"
+echo " "
