@@ -50,7 +50,7 @@ else
 fi
 
 echo $machine > ~/Documents/Scripts/Pro7Sync/.machine.txt
-
+echo " "
 echo "Should Automation Be Turned On? (Y on N)"
 read plist
 
