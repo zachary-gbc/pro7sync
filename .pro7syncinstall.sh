@@ -63,8 +63,16 @@ then
     fi
 fi
 
+cd ~/Documents/Scripts/Pro7Sync
+osascript -e 'use framework "AppKit"' -e 'set i to current application'\''s NSImage'\''s alloc()'\''s initWithContentsOfFile:"update.icns"' -e 'current application'\''s NSWorkspace'\''s sharedWorkspace()'\''s setIcon:i forFile:"update.command" options:0'
+osascript -e 'use framework "AppKit"' -e 'set i to current application'\''s NSImage'\''s alloc()'\''s initWithContentsOfFile:"manual.icns"' -e 'current application'\''s NSWorkspace'\''s sharedWorkspace()'\''s setIcon:i forFile:"manual.command" options:0'
+osascript -e 'use framework "AppKit"' -e 'set i to current application'\''s NSImage'\''s alloc()'\''s initWithContentsOfFile:"delete.icns"' -e 'current application'\''s NSWorkspace'\''s sharedWorkspace()'\''s setIcon:i forFile:"newdelete.command" options:0'
+
 rm -f ~/Documents/Scripts/Pro7Sync/readme.md
 rm -f ~/Documents/Scripts/Pro7Sync/pro7sync.plist
+rm -f ~/Documents/Scripts/Pro7Sync/update.icns
+rm -f ~/Documents/Scripts/Pro7Sync/manual.icns
+rm -f ~/Documents/Scripts/Pro7Sync/delete.icns
 rm -f ~/Documents/Scripts/Pro7Sync/update.png
 rm -f ~/Documents/Scripts/Pro7Sync/manual.png
 rm -f ~/Documents/Scripts/Pro7Sync/delete.png
