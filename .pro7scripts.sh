@@ -2,7 +2,6 @@
 
 logdatetime=$(date +%F_%H:%M:%S)
 machine=$(<~/Documents/Scripts/Pro7Sync/.machine.txt)
-echo "$logdatetime - Pro7 Scripts Started"
 
 processnumber=$(ps aux | grep -v grep | grep -ci "ProPresenter.app")
 currentdate=$(date +%F)
@@ -91,6 +90,8 @@ if [[ $ready == "no" ]]
 then
     echo "$logdatetime - Sync App Still Syncing, Skipping Script";
     exit 1
+else
+    echo "$logdatetime - Pro7 Scripts Started"
 fi
 
 if [[ $runbackup == "yes" ]]
